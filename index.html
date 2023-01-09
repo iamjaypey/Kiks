@@ -12,13 +12,13 @@
 </head>
 <body>
     <section class="sec">
-        <header class="header">
-            <a href="#">
-                <img src="./assets/kiksLogo.png" class="img-logo" alt="logo-here">
-            </a>
-            <div class="nav-list">
-                <ul>
-                    <li><a href="">MENS</a></li>
+        <header class="navbar">
+            <div class="logo">
+                <a href=""><img src="./assets/kiksLogo.png" class="img-logo" alt="logo-here"></a>
+            </div>
+            
+                <ul class="menu">
+                    <li><a href="" class="active">MENS</a></li>
                     <li><a href="">WOMENS</a></li>
                     <li><a href="">KIDS</a></li>
                     <li><a href="">SPORTS</a></li>
@@ -31,7 +31,6 @@
                     <i class="fa fa-bars"></i>
                 </div>
 
-            </div>
         
             <form class="schBx" action="#">
                 <input type="text" class="txt" placeholder="What are you looking for?"> 
@@ -363,9 +362,15 @@
         </div>
     </section>
         
-<footer>
-    <p class="tag">@devjaydcoder</p>
-</footer>
-    
+    <footer>
+        <p class="tag">@devjaydcoder</p>
+    </footer>
+
+    <script>
+        $("menu-btn")click.(function (){
+            $("navbar .menu").toggleClass("active");
+            $(".menu-btn i") .toggleClass("active");
+        })
+    </script>
 </body>
 </html>

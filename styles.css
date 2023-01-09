@@ -25,7 +25,7 @@ body {
     display: none;
 }
 
-.header{
+.navbar{
     /* 
     top: 0;
     left: 0;
@@ -65,12 +65,12 @@ header ul li a {
     text-decoration:none;
 } */
 
-.header .nav-list li {
+.navbar .menu li {
     list-style: none;
     display: inline-block;
 }
 
-.header .nav-list li a {
+.navbar .menu li a {
     display: block;
     margin-left: 20px;
     color:#FFF8F3 ;
@@ -79,37 +79,44 @@ header ul li a {
     text-decoration: none;
 }
 
-.header .nav-list li a:hover {
+.navbar .menu li a:hover {
     border-bottom:4px solid #f63e4e;
 }
 
-.header .nav-list li a  i{
+.navbar .menu li a  i{
     color:#f63e4e;
 }
-.header .img-logo{
+.navbar .img-logo{
     width: 10rem;
     border-radius: 5px;
 }
 
 .schBx{
     float: right;
-    padding: 6px;
-    border: none;
+    padding: 6px 0Px;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px; 
     border-radius: 19px;
-    width: 25%;
+    width: 30%;
+    height: 50px;
 }
 
 .schBx .txt{
     width: 70%;
+    height:40px;
+    text-align: center;
     border-radius: 19px;
 }
 
 .schBx .icn{
     width: 25%;
     height: 100%;
+    border-radius:19px;
+}
+
+.schBx .icn :hover {
+    cursor: pointer;
 }
 
 .hero{
@@ -130,11 +137,16 @@ header ul li a {
 
 .hero h3 {
     font-size: 40px;
+    font-weight: bold;
+    color: #FFF8F3;
+    margin-top: 1.5rem;
+    box-shadow: 0 150px 500px rgba(0,0,0,0.220);
 }
 
 .hero h4 {
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .hero button {
@@ -147,6 +159,7 @@ header ul li a {
     border-radius: 5px;
     cursor: pointer;
     width: 12%;
+    /* box-shadow: 0 215px 15px rgba(250, 19, 19, 0.288); */
 }
 
 .pheading {
@@ -371,3 +384,41 @@ header ul li a {
     margin-top: 2rem;
     margin-bottom: 2rem;
  }
+
+ /* Responsive */
+
+ @media (max-width: 820px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .img-logo{
+        display: none;
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    .schBx{
+        display: none;
+    }
+    .header .menu{
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: #003355;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    } 
+    .header .menu li {
+        display: flex;
+        justify-content: center;
+    }
+    .header .menu li a {
+        margin: 10px 0;
+        font-size: 25px;
+    }
+ } 
