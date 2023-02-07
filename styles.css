@@ -39,6 +39,7 @@ body {
     align-items: center;
     z-index: 999;
     width: 100%;
+
     /* border: 3px solid yellow; */
     /* position: absolute; */
 }
@@ -87,7 +88,7 @@ header ul li a {
     color:#f63e4e;
 }
 .navbar .img-logo{
-    width: 10rem;
+    width: 7rem;
     border-radius: 5px;
 }
 
@@ -141,13 +142,22 @@ header ul li a {
     color: #FFF8F3;
     margin-top: 1.5rem;
     box-shadow: 0 150px 500px rgba(0,0,0,0.220);
+    background-color: black;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .hero h4 {
     font-size: 25px;
     font-weight: bold;
     margin-top: 10px;
+    background-color: #FFF8F3;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
 
 .hero button {
     margin-top: 30px;
@@ -389,35 +399,49 @@ header ul li a {
 
  @media (max-width: 820px) {
     .menu-btn {
-        display: block;
+        display: flex;
         z-index: 999;
+        float: right;
+        border: 2px solid blue;
+    }
+
+.menu-btn .fa-bars {
+        float: right;
+    }
+    .menu-btn i.active::before {
+        content: "\f00d";
     }
     .img-logo{
         display: none;
     }
 
-    .header{
+    .navbar{
         width: 100%;
     }
 
     .schBx{
         display: none;
     }
-    .header .menu{
-        height: 100vh;
+    .navbar .menu{
+        position: fixed;
+        height: 50vh;
         width: 100%;
         left: -100%;
         top: 0;
         background-color: #003355;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 20px;
         transition: all 0.3s ease;
     } 
-    .header .menu li {
+
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
         display: flex;
         justify-content: center;
     }
-    .header .menu li a {
+    .navbar .menu li a {
         margin: 10px 0;
         font-size: 25px;
     }
